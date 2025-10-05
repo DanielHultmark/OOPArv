@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace OOPArv
 {
+    //Hundklass som även avropar Animal som basklass
     internal class Dog : Animal
     {
-        public void PrintSomething()
+        //konstruktor för Dog
+        public Dog(string name, string sound, int age) : base(name, sound, age)
         {
-            Console.WriteLine($"Djuret heter: {Name}");
+
         }
+        public void MakeSound()
+        {
+            Console.WriteLine($"{Name} is Barking");
+        }
+        
     }
 }
